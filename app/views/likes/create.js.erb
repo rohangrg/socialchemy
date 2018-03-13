@@ -1,0 +1,14 @@
+
+if('<%=@like.parent_type%>' == 'Post' ){
+	cl = '<%=@tl%>';
+	 $('#plike<%=@like.parent_id%>').text(cl);
+}else if('<%=@like.parent_type%>' == 'Comment' ){
+	cl = '<%=@tl%>';
+	 $('#clike<%=@like.parent_id%>').text(cl);
+}
+
+
+
+
+
+

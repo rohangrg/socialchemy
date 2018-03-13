@@ -4,7 +4,9 @@ class  PostsController < ApplicationController
 
 		@post = Post.new
 		@comment = Comment.new
+	    @like = Like.new
 		# @posts = Post.all
+
 
 	end
 
@@ -16,6 +18,8 @@ class  PostsController < ApplicationController
 				# user: current_user
 			)
 
+		@comment = Comment.new
+		@like = Like.new
 
 	end
 

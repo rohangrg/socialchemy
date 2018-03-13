@@ -6,3 +6,17 @@
 		</small>
 	</p>
 </li>
+<div>
+	<div style="display: inline-block;">	
+		<%= form_for @like , remote: true  do |l|%>
+	   		<input type="hidden" name="like[parent_type]" value="Comment">
+	   		<input type="hidden" name="like[parent_id]" value="<%= comment.id %>">
+	   		<%= l.submit 'like' %>
+		<%end%>
+	</div>
+	<div  style="display: inline-block;">
+		<%totalLikes = 0%>
+		<%totalLikes = comment.likes.length%>
+		<p id = "clike<%= comment.id%>"><%=totalLikes%></p>
+	</div>
+</div>
