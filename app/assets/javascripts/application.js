@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+window.addEventListener('load', function(){
+	var hei = $('#body-header')[0].getBoundingClientRect().height;
+	
+	var ele = $('.body-main');
+	ele.css("margin-top", hei+'px');
+});

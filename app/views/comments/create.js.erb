@@ -1,5 +1,5 @@
 var newComment = $('<%= escape_javascript render "comment", comment: @comment %>');
-
+console.log("js");
 if ('<%= @comment.parent_type %>' == 'Post'){
 	$('#post<%= @comment.parent_id %> .post-comments-container ul').prepend(newComment);
 }else{

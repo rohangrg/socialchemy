@@ -10,16 +10,16 @@
 
 	<header id="body-header">
 		<div class="logo">
-			<p>Socialchemy</p>
+			<p style="font-size: 24px;">Socialchemy</p>
 		</div>
 		<nav>
 			<ul>
 				<% if user_signed_in? %>
-				<li>
-					<%= current_user.email %>
+				<li class="logo">
+					<p  ><%= current_user.email %></p>
 				</li>
-				<li>
-					<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+				<li class="logo">
+					<p ><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
 				</li>
 				<% else %>
 				<li>
@@ -33,7 +33,12 @@
 		</nav>
 	</header>
 
-<%= yield %>
+	<main class="body-main">
+		<div class="left-sidebar"></div>
+		<%= yield %>
+     	<div class="right-sidebar"></div>
+	</main>
+
 
 </body>
 </html>

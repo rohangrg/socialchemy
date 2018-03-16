@@ -1,0 +1,10 @@
+var element = $('#comment<%=@comment.id%>');
+element.children()[0].remove();
+
+ele = $('<p>' , {
+	html:'<%=@comment.content%>',
+	class:'comment-user'
+});
+
+element.prepend(ele);
+$(element.children()[2].children[3]).show();

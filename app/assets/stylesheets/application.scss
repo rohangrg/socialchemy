@@ -17,15 +17,15 @@
 body{
 	margin: 0;
 	/*padding: 0;*/
+	background-color: #03A9F4;
 
 	#body-header{
 		position: fixed;
 		width: 100vw;
 		top: 0;
-		border-bottom: 2px dotted blue;
 		display: flex;
 		justify-content: space-between;
-		background-color: white;
+		background-color: #eef5f9;
 
 		.logo{
 			background-color: blue;
@@ -33,17 +33,27 @@ body{
 			p{
 				color: white;
 			}
+			a{
+				color: white;
+    			text-decoration: none;
+    			margin-right: 15px;
+			}
 		}
 
 
 		nav{
 
 			ul{
+				margin: 0px;
 				list-style: none;
 				display: flex;
 				justify-content: space-around;
+				/*padding-left: 0px;*/
 
 				li{
+					padding: 0 5px 0 ;
+					font-size: 24px;
+					list-style: none;
 					margin-right: 5px;
 				}
 			}
@@ -53,27 +63,164 @@ body{
 
 	.body-main{
 		margin-top: 60px;
+		display: flex;
+		justify-content: space-between;
+
+		li{
+			list-style: none;
+		}
 	}
 
 }
+.left-sidebar{
+	width: 20%;
+	background-color: #0277BD;
+	border: 0px;
+	border-right: 5px;
+	border-color: white;
+	border-style: solid;
+}
+.center-container{
+	width: 50%;
 
+	ul{
+		padding-left: 0px;
 
+	}
+}
+.right-sidebar{
+	width: 20%;
+	border: 0px;
+	background-color: #0277BD;
+	border-left: 5px;
+	border-color: white;
+	border-style: solid;
+}
 
+.postContainer{
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
 
+.heading{
+	background: white;
+	border-radius: 6px;
+	padding: 4px;
+}
+#newpostheading{
+	background-color: #0277BD;
+    color: white;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 17px;
+}
+#newpostinput{
+	border: 3px;
+    color: #0277bd;
+    padding: 2px;
+    padding-left: 5px;
+    font-size: 18px;
+    width: 74%;
+    border-color: #0277bd;
+    border-radius: 4px;
+    border-style: solid;
+}
+#newpostsubmit{
+	background-color: #0277bd;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    border-color: white;
+    padding: 3px;
+}
+.postContainer{
+	padding: 28px;
 
+	.post-content{
+	    word-break: break-all;
+    	color: #05598c;
+   	    font-size: 25px;
+   	    border-style: solid;
+	    border-color: #e8e8e8;
+    	padding: 22px;
+    	border-radius: 19px;
+	}
 
+	.post-user{
+		color: #04a9f4;
+	}
+	.led{
+		text-align: center;
+		min-width: 20px;
+		text-decoration: none;
+		background-color: #0277bd;
+   	    border-radius: 5px;
+   		font-size: 20px;
+   		color: white;
+   		padding: 3px;
+	}
+}
 
+.comment-container{
+	    margin-left: 50px;
+    	border-style: solid;
+    	margin-top: 22px;
+    	border-radius: 10px;
+    	border-color: #e8e8e8;
+    	padding-left: 12px;
 
+    	.comment-content{
+    		word-break: break-all;
+    		color: #05598c;
+   	    	font-size: 19px;
+    		padding: 2px;
+    	}
+    	.comment-user{
+    		color: #04a9f4;
 
+    	}
+    	.ledc{
+    		text-align: center;
+			min-width: 20px;
+			text-decoration: none;
+			background-color: #0277bd;
+   	    	border-radius: 5px;
+   			font-size: 15px;
+   			color: white;
+   			padding: 3px;
 
+    	}
+}
 
+#newcommentheading{
+	background-color: #ffffff;
+    color: #04a9f4;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    border-style: solid;
+    border-color: #0277bd38;
+}
 
-
-
-
-
-
-
-
-
-
+#newcommentinput{
+	border: 2.5px;
+    color: #0277bd;
+    padding: 3px;
+    padding-left: 7px;
+    font-size: 17px;
+    width: 35%;
+    border-color: #d0d0d0;
+    border-radius: 4px;
+    border-style: solid;
+}	
+#newcommentsubmit{
+	background-color: #0277bd;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    padding: 3px;
+}

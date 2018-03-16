@@ -1,4 +1,4 @@
-<li id="post<%= post.id %>">
+<li class="postContainer" id="post<%= post.id %>">
 	<p class="post-content"><%= post.content %></p>
 	<p class="post-user">
 		<small>
@@ -6,29 +6,35 @@
 			at <%= post.created_at.to_date %>
 		</small>
 	</p>
-	<div>
+	<div >
 	    <div style="display: inline-block;">	
 			<%= form_for @like , remote: true  do |l|%>
 	    			<input type="hidden" name="like[parent_type]" value="Post">
 	    			<input type="hidden" name="like[parent_id]" value="<%= post.id %>">
-	    			<%= l.submit 'like' %>
+	    			<%= l.submit 'like' , class: 'led' %>
 			<%end%>
 		</div>
 		<div  style="display: inline-block;">
 			<%totalLikes = 0%>
 			<%totalLikes = post.likes.length%>
-			<p id = "plike<%= post.id%>"><%=totalLikes%></p>
+			<p class= 'led' id = "plike<%= post.id%>"><%=totalLikes%></p>
+		</div>
+		<div style="display: inline-block;">
+			<%= link_to 'Delete' , post_path(post)  , remote: true ,  method: :delete , class: 'led'%>
+		</div>
+		<div style="display: inline-block;">
+			<%= link_to 'Edit' , edit_post_path(post)  , remote: true , class: 'led' %>
 		</div>
 	</div>
-
+	<hr>
 	<div class="post-comments-container">
-		<h4>Comments</h4>
+		<h4 style="font-size: 23px;color: #023350;">Comments</h4>
 		<%= form_for @comment, remote: true do |fc| %>
 			<input type="hidden" name="comment[parent_type]" value="Post">
 			<input type="hidden" name="comment[parent_id]" value="<%= post.id %>">
-			<%= fc.label :content, "New Comment" %>
-			<%= fc.text_field :content %>
-			<%= fc.submit %>
+			<%= fc.label :content, "New Comment" , id: 'newcommentheading' %>
+			<%= fc.text_field :content , id: 'newcommentinput' %>
+			<%= fc.submit 'Create Comment' , id: 'newcommentsubmit'%>
 		<%end%>
 
 		<ul>
@@ -40,4 +46,3 @@
 
 	</div>
 </li>
-<hr>

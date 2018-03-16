@@ -1,22 +1,28 @@
-<li>
+<li id="comment<%= comment.id %>" class="comment-container">
 	<p class="comment-content"><%= comment.content %></p>
 	<p class="comment-user">
 		<small>
 			By <%= comment.user.email %> at <%= comment.created_at.to_date %>
 		</small>
 	</p>
-</li>
 <div>
 	<div style="display: inline-block;">	
 		<%= form_for @like , remote: true  do |l|%>
 	   		<input type="hidden" name="like[parent_type]" value="Comment">
 	   		<input type="hidden" name="like[parent_id]" value="<%= comment.id %>">
-	   		<%= l.submit 'like' %>
+	   		<%= l.submit 'like' , class: 'ledc' %>
 		<%end%>
 	</div>
 	<div  style="display: inline-block;">
 		<%totalLikes = 0%>
 		<%totalLikes = comment.likes.length%>
-		<p id = "clike<%= comment.id%>"><%=totalLikes%></p>
+		<p id = "clike<%= comment.id%>" class= "ledc"><%=totalLikes%></p>
+	</div>
+	<div style="display: inline-block;">
+			<%= link_to 'Delete' , comment_path(comment)  , remote: true ,  method: :delete , class: 'ledc'%>
+	</div>
+	<div style="display: inline-block;">
+			<%= link_to 'Edit' ,  edit_comment_path(comment)  , remote: true , class: 'ledc' %>
 	</div>
 </div>
+</li>

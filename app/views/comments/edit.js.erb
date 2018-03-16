@@ -1,0 +1,7 @@
+console.log("js edit");
+var editComment = $('<%= escape_javascript render "commentEdit", comment: @comment %>');
+var element = $('#comment<%=@comment.id%>');
+element.children()[0].remove();
+element.prepend(editComment);
+
+$(element.children()[2].children[3]).hide();
