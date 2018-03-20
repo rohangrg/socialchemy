@@ -2,6 +2,16 @@
 if('<%=@like.parent_type%>' == 'Post' ){
 	cl = '<%=@tl%>';
 	 $('#plike<%=@like.parent_id%>').text(cl);
+	 element = $('#post<%=@like.parent_id%>');
+	 eleval = element[0].children[2].children[0].children[0].children[3];
+	 console.log(eleval);
+	 if (eleval.value == 'like'){
+	 	eleval.value = 'liked'
+	 }
+	 else if(eleval.value == 'liked'){
+	 	eleval.value = 'like'
+	 }
+
 }else if('<%=@like.parent_type%>' == 'Comment' ){
 	cl = '<%=@tl%>';
 	 $('#clike<%=@like.parent_id%>').text(cl);

@@ -1,0 +1,28 @@
+<div>
+	
+	<div>
+		<%= image_tag @user.avatar.url %>
+	</div>
+	
+	<%= form_for @user do |u|%>
+
+	
+
+	<div>
+		<%= u.label :email%>
+		<%= u.text_field :email%>
+	</div>
+	<div>
+		<%= u.label :avatar%>
+		<%= u.file_field :avatar%>
+	</div>
+
+	<div>
+		<%= u.submit 'Update profile'%>
+
+	</div>
+	<%end%>
+
+
+</div>
+

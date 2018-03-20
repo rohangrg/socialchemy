@@ -11,7 +11,11 @@
 			<%= form_for @like , remote: true  do |l|%>
 	    			<input type="hidden" name="like[parent_type]" value="Post">
 	    			<input type="hidden" name="like[parent_id]" value="<%= post.id %>">
-	    			<%= l.submit 'like' , class: 'led' %>
+	    		    	<% if user_signed_in? && Like.exists?(parent_id: post.id , parent_type: "Post" , user_id: current_user.id)%>
+	    				    <%= l.submit 'liked' , class: 'led' %>
+	    				<%else%>
+	    			    	<%= l.submit 'like' , class: 'led' %>
+	    				<%end%>
 			<%end%>
 		</div>
 		<div  style="display: inline-block;">

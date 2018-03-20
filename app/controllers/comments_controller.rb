@@ -15,6 +15,8 @@ class  CommentsController < ApplicationController
 				# or you can do
 				# user: current_user
 			)
+		# UserMailer.new_comment(@comment).deliver_later
+
 		@like = Like.new
 	end
 

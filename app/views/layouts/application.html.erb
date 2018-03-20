@@ -19,14 +19,14 @@
 					<p  ><%= current_user.email %></p>
 				</li>
 				<li class="logo">
-					<p ><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+					<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
 				</li>
 				<% else %>
-				<li>
-					<%= link_to "Sign In", new_user_session_path %>
+				<li class="logo">
+					<p><%= link_to "Sign In", new_user_session_path %></p>
 				</li>
-				<li>
-					<%= link_to "Sign Up", new_user_registration_path %>
+				<li class="logo">
+					<p><%= link_to "Sign Up", new_user_registration_path %></p>
 				</li>
 				<% end %>
 			</ul>
@@ -34,7 +34,11 @@
 	</header>
 
 	<main class="body-main">
-		<div class="left-sidebar"></div>
+		<div class="left-sidebar">
+			<ul id = 'user-container'>
+				
+			</ul>
+		</div>
 		<%= yield %>
      	<div class="right-sidebar"></div>
 	</main>

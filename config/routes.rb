@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'likes/create'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'users/show'
+  patch 'users/update' => 'users#update' , as: 'user' 
 
   devise_for :users
 

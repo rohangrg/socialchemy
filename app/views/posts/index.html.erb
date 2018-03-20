@@ -10,14 +10,28 @@
 
 	
 	<h2 class = "heading" style="width: 97px;">All Posts</h2>
-		<ul>
-		<% Post.all.reverse.each do |p| %>
+
+		<ul id = "All-Posts">
+		<% @p.each do |p| %>
 			<%= render "post", post: p %>
 		<% end %>
 		</ul>
 		
+		
 </div>
 
+<!-- <script type="text/javascript">
+	initialScroll = 0;
+	$(window).scroll(function(){
+		if (window.scrollY > initialScroll + 500 ){
+			console.log('fired')
+			console.log($.getScript($('.pagination .next_page').attr('href')))
+			initialScroll = window.scrollY;
+		}
+	});
+
+</script>>
+ -->
 
 
 
