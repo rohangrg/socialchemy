@@ -1,0 +1,242 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* line 18, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+  /*padding: 0;*/
+  background-color: #03A9F4;
+}
+/* line 23, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body #body-header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eef5f9;
+}
+/* line 31, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body #body-header .logo {
+  background-color: blue;
+}
+/* line 34, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body #body-header .logo p {
+  color: white;
+}
+/* line 37, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body #body-header .logo a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+/* line 47, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body #body-header nav ul {
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  /*padding-left: 0px;*/
+}
+/* line 54, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body #body-header nav ul li {
+  padding: 0 5px 0;
+  font-size: 24px;
+  list-style: none;
+  margin-right: 5px;
+}
+/* line 65, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body .body-main {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 70, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+body .body-main li {
+  list-style: none;
+}
+
+/* line 76, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.left-sidebar {
+  width: 20%;
+  background-color: #0277BD;
+  border: 0px;
+  border-right: 5px;
+  border-color: white;
+  border-style: solid;
+}
+
+/* line 84, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.center-container {
+  width: 50%;
+}
+/* line 87, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.center-container ul {
+  padding-left: 0px;
+}
+
+/* line 92, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.right-sidebar {
+  width: 20%;
+  border: 0px;
+  background-color: #0277BD;
+  border-left: 5px;
+  border-color: white;
+  border-style: solid;
+}
+
+/* line 101, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.postContainer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* line 108, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.heading {
+  background: white;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+/* line 113, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+#newpostheading {
+  background-color: #0277BD;
+  color: white;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 17px;
+}
+
+/* line 120, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+#newpostinput {
+  border: 3px;
+  color: #0277bd;
+  padding: 2px;
+  padding-left: 5px;
+  font-size: 18px;
+  width: 74%;
+  border-color: #0277bd;
+  border-radius: 4px;
+  border-style: solid;
+}
+
+/* line 131, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+#newpostsubmit {
+  background-color: #0277bd;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  border-color: white;
+  padding: 3px;
+}
+
+/* line 140, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.postContainer {
+  padding: 28px;
+}
+/* line 143, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.postContainer .post-content {
+  word-break: break-all;
+  color: #05598c;
+  font-size: 25px;
+  border-style: solid;
+  border-color: #e8e8e8;
+  padding: 22px;
+  border-radius: 19px;
+}
+/* line 153, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.postContainer .post-user {
+  color: #04a9f4;
+}
+/* line 156, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.postContainer .led {
+  text-align: center;
+  min-width: 20px;
+  text-decoration: none;
+  background-color: #0277bd;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  padding: 3px;
+}
+
+/* line 168, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.comment-container {
+  margin-left: 50px;
+  border-style: solid;
+  margin-top: 22px;
+  border-radius: 10px;
+  border-color: #e8e8e8;
+  padding-left: 12px;
+}
+/* line 176, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.comment-container .comment-content {
+  word-break: break-all;
+  color: #05598c;
+  font-size: 19px;
+  padding: 2px;
+}
+/* line 182, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.comment-container .comment-user {
+  color: #04a9f4;
+}
+/* line 186, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+.comment-container .ledc {
+  text-align: center;
+  min-width: 20px;
+  text-decoration: none;
+  background-color: #0277bd;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  padding: 3px;
+}
+
+/* line 199, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+#newcommentheading {
+  background-color: #ffffff;
+  color: #04a9f4;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 17px;
+  font-weight: 600;
+  border-style: solid;
+  border-color: #0277bd38;
+}
+
+/* line 210, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+#newcommentinput {
+  border: 2.5px;
+  color: #0277bd;
+  padding: 3px;
+  padding-left: 7px;
+  font-size: 17px;
+  width: 35%;
+  border-color: #d0d0d0;
+  border-radius: 4px;
+  border-style: solid;
+}
+
+/* line 221, /home/rohan/Desktop/socialchemy/app/assets/stylesheets/application.scss */
+#newcommentsubmit {
+  background-color: #0277bd;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  padding: 3px;
+}
